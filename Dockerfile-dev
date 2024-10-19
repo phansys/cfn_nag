@@ -2,10 +2,11 @@ FROM ruby:2.7-alpine
 
 COPY . /
 
-RUN apk add --update build-base \
-    curl \
-    git
-
-RUN gem install bundler
-RUN gem install rubocop
-RUN bundle install
+RUN apk add --update --no-cache \
+        build-base \
+        curl \
+        git \
+    && gem install \
+        bundler:2.4.22 \
+        rubocop \
+    && bundle install

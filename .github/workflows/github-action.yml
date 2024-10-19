@@ -3,8 +3,8 @@ name: github-action
 
 on:
   push:
-    branches:
-      - master
+    # branches:
+    #   - master
     paths:
       - .github/workflows/github-action.yml
       - action.yml

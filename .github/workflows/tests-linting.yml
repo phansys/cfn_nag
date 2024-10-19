@@ -3,7 +3,7 @@ name: test-lint
 on:
   workflow_call:
   push:
-    branches: [ master ]
+    # branches: [ master ]
   pull_request:
     branches: [ master ]
 
